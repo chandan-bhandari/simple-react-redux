@@ -1,0 +1,17 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "no-unused-vars": ["error", {
+      "vars": "all",
+      "args": "after-used"
+    }]
+  },
+  "overrides": [{
+    "files": ["**/*.test.js"],
+    "globals": {
+      "shallow": true,
+      "render": true,
+      "mount": true
+    }
+  }]
+}
