@@ -12,20 +12,9 @@ class Posts extends React.Component {
       <div>
         {loading && <div>Loading...</div>}
         {error && <span>Error: {error}</span>}
-        {posts.length && (
+        {posts && posts.length && (
           <div>
             <h1>Posts</h1>
-            <form>
-              <label>
-                Show posts for user with ID: 
-                <input type="text" name="userId" />
-              </label>
-              <label>
-                Make new HTTP request
-                <input type="checkbox" name="userId" />
-              </label>
-              <input type="submit" value="Submit" />
-            </form>
             <ul>
               {posts.map(post => (
                 <li key={post.id}>
